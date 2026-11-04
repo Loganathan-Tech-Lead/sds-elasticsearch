@@ -1,0 +1,8 @@
+services:
+  kafka:
+    image: apache/kafka:3.8.0
+    ports: ['9092:9092']
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    environment: {discovery.type: single-node, xpack.security.enabled: 'false'}
+    ports: ['9200:9200']
